@@ -1,10 +1,10 @@
 #include "Human.h"
 
-Human::Human(): Player(name){}
+Human::Human(string playerName): Player(playerName){}
 char Human::makeMove() {
     std::cout << "Enter move:";
     std::cin >> move;
-    return move;
+    return toupper(move); // make characters uppercase
 }
 
 Human::~Human(){}

@@ -3,9 +3,8 @@
 #include "Player.h"
 
 class Computer : public Player {
-    protected:
-        char makeMove() override;
     public:
+        char makeMove() override;
         Computer();
         ~Computer();
 };

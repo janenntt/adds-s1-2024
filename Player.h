@@ -4,12 +4,13 @@
 using std::string;
 
 class Player{
-    public:
+    protected:
         string name;
         char move; // either 'R', 'P', or 'S'
+    public:
         virtual char makeMove() = 0;
         string getName();
-        Player(string name);
+        Player(string _name);
         ~Player();
 };
 #endif
