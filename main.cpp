@@ -7,8 +7,8 @@
 int main(){
     Human human("Mei");
     Computer computer;
-    Referee referee;
-    Player * winner = referee.refGame(&human, &computer);
+    Referee ref;
+    Player * winner = ref.refGame(&human, &computer);
     if (winner == nullptr){
         std::cout << "It's a tie." << std::endl;
     } else {

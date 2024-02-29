@@ -1,5 +1,5 @@
 #include "Player.h"
-Player::Player(string _name): name(_name){}
+Player::Player(string playerName): name(playerName){}
 
 string Player::getName(){
     return name;
