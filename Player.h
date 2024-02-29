@@ -9,7 +9,7 @@ class Player{
     public:
         virtual char makeMove() = 0;
         string getName();
-        Player(string playerName = "Player");
+        Player(string _name);
         ~Player();
 };
 #endif
