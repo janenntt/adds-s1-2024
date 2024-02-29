@@ -5,7 +5,8 @@
 class Human : public Player {
     public:
         char makeMove() override;
-        Human(string _name = "Human");
+        Human();
+        Human(string _name);
         ~Human();
 };
 #endif
