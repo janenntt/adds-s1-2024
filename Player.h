@@ -18,7 +18,7 @@ class Player{
         string name;
     public:
         virtual Move* makeMove() = 0;
-        string getName();
+        virtual string getName() = 0;
         Player(string name);
 };
 #endif

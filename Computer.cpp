@@ -18,3 +18,7 @@ Move* Computer::makeMove(){
         default: return new Zombie();
     }
 }
+
+string Computer::getName() {
+    return "Computer";
+}
