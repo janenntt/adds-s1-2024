@@ -4,6 +4,10 @@ Human::Human(){
     name = this->getName();
 }
 
+Human::Human(string name){
+    this->name = name;
+}
+
 Move* Human::makeMove() {
     MoveFactory *obj = new MoveFactory;
     string move;

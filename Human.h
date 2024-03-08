@@ -5,8 +5,9 @@
 
 class Human : public Player{
     public:
-        Move* makeMove() override;
         Human();
+        Human(string name);
+        Move* makeMove() override;
         string getName() override;
 };
 #endif
