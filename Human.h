@@ -7,7 +7,6 @@ class Human : public Player{
     public:
         Move* makeMove() override;
         Human();
-        Human(string name);
         string getName() override;
 };
 #endif

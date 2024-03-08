@@ -3,7 +3,9 @@
 #include <ctime>
 
 
-Computer::Computer(): Player("Computer"){}
+Computer::Computer(){
+    name = this->getName();
+}
 
 Move* Computer::makeMove(){
     MoveFactory *obj = new MoveFactory;

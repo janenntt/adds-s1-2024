@@ -1,8 +1,9 @@
 #include "Human.h"
 
-Human::Human(): Player("Human") {}
+Human::Human(){
+    name = this->getName();
+}
 
-Human::Human(string name): Player(name){}
 Move* Human::makeMove() {
     MoveFactory *obj = new MoveFactory;
     string move;

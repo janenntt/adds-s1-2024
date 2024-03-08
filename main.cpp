@@ -4,16 +4,17 @@
 #include "Referee.h"
 
 int main(){
-    
-    Referee referee;
-    Human human("Mei");
-    Computer computer;
-    Player* p1 = &human;
-    Player* p2 = &computer;
-    Player* winner = referee.refGame(p1,p2);
-
-    if (winner){
-        std::cout << winner->getName() << " wins." << std::endl;
+    Referee *referee = new Referee;
+    Human *human = new Human;
+    Computer *computer = new Computer;
+    computer->makeMove();
+    Player *winner = referee->refGame(human,computer);
+    if (winner == nullptr){
+        std::cout << "It's a Tie";
+    } else if (winner == human){
+        std::cout << "Player1 wins";
+    } else {
+        std::cout << "Player2 wins";
     }
     return 0;
 }
