@@ -5,7 +5,7 @@
 class Computer : public Player {
     public:
         Computer();
-        Move* makeMove() override;
-        string getName() override;
+        Move* makeMove();
+        string getName();
 };
 #endif

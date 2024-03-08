@@ -1,7 +1,7 @@
 #include "Human.h"
 
 Human::Human(){
-    name = this->getName();
+    this->name = "Human";
 }
 
 Human::Human(string name){

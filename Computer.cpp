@@ -4,7 +4,7 @@
 
 
 Computer::Computer(){
-    name = this->getName();
+    this->name = "Computer";
 }
 
 Move* Computer::makeMove(){
