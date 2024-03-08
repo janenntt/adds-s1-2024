@@ -4,5 +4,6 @@
 
 class Monkey : public Move {
     string getName() override;
+    bool defeat(Move* opponent) override;
 };
 #endif

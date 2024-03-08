@@ -7,6 +7,6 @@ class Move{
     public:
         string move_name;
         virtual string getName() = 0; // returns the name of a Move instance
-
+        virtual bool defeat(Move* opponent) = 0;
 };
 #endif

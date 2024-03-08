@@ -1,14 +1,16 @@
 #include "Human.h"
 
 Human::Human(): Player("Human") {}
+
 Human::Human(string name): Player(name){}
 Move* Human::makeMove() {
-    string move_name;
+    MoveFactory *obj = new MoveFactory;
+    string move;
     std::cout << "Enter move: ";
-    std::cin >> move_name;
-    return createMove(move_name);
+    std::cin >> move;
+    return obj->createMove(move);
 }
 
 string Human::getName() {
-    return name;
+    return this->name;
 }

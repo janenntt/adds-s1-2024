@@ -2,15 +2,8 @@
 #define PLAYER_H
 #include <iostream>
 #include "Move.h"
-#include "createMove.h"
-#include "Rock.h"
-#include "Paper.h"
-#include "Scissors.h"
-#include "Monkey.h"
-#include "Ninja.h"
-#include "Robot.h"
-#include "Pirate.h"
-#include "Zombie.h"
+#include "MoveFactory.h"
+#include "unordered_map"
 using std::string;
 
 class Player{

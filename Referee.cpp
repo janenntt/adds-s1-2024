@@ -8,21 +8,12 @@ Player* Referee::refGame(Player *player1, Player *player2){
     string move1 = m1->getName();
     string move2 = m2->getName();
 
-    if ((move1 == move2) || ((move1 == "Rock" || move1 == "Paper" || move1 == "Scissors") && (move2 == "Monkey" || move2 == "Ninja" || move2 == "Robot" || move2 == "Zombie" || move2 == "Pirate"))) {
-        return nullptr;
-
-    } else if ((move1 == "Rock" && move2 == "Scissors")
-            || (move1 == "Scissors" && move2 == "Paper")
-            || (move1 == "Paper" && move2 == "Rock")
-            || (move1 == "Monkey" && (move2 == "Ninja" || move2 == "Robot"))
-            || (move1 == "Robot" && (move2 == "Ninja" || move2 == "Zombie"))
-            || (move1 == "Pirate" && (move2 == "Robot" || move2 == "Monkey"))
-            || (move1 == "Ninja" && (move2 == "Pirate" || move2 == "Zombie"))
-            || (move1 == "Zombie" && (move2 == "Pirate" || move2 == "Monkey"))){
-
+    if (m1->defeat(m2)) {
         return player1;
 
-    } else {
+    } else if (m2->defeat(m1)){
         return player2;
+    } else {
+        return nullptr;
     }
 }

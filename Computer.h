@@ -4,8 +4,8 @@
 
 class Computer : public Player {
     public:
-        Move* makeMove() override;
         Computer();
+        Move* makeMove() override;
         string getName() override;
 };
 #endif
