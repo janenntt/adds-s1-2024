@@ -3,6 +3,7 @@
 #include "Move.h"
 
 class Monkey : public Move {
+    public:
     string getName() override;
     bool defeat(Move* opponent) override;
 };

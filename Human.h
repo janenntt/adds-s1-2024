@@ -3,7 +3,7 @@
 #include "Player.h"
 #include "Move.h"
 
-class Human : public Player, CreateMove {
+class Human : public Player{
     public:
         Move* makeMove() override;
         Human();
