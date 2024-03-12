@@ -2,6 +2,9 @@
 
 int Reverser::reverseDigit(int value){
     static string x;
+    if (value < 10){
+        return value;
+    }
     if (value == 0){
         return stoi(x);
     }
@@ -17,17 +20,9 @@ string Reverser::reverseString(string characters){
     static string new_string = "";
     if (index < 0 || characters.empty())
         return new_string;
-
-    // Append the character at index to the beginning of the reversed string
     new_string += characters[index];
-
-    // Decrement index to process the next character in the next recursive call
     index--;
-
-    // Recursive call with the substring excluding the last character
     return reverseString(characters);
-    
-        
 }
 
 
