@@ -14,7 +14,7 @@ int main() {
         }
         cout << "Please enter the load size: ";
         cin >> loadSize;
-        if (loadSize < 1 || loadSize >= numCrates){
+        if (loadSize < 1 || loadSize > (numCrates - 1)){
             cout << "Invalid input!" << endl;
             continue;
         }
