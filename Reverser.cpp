@@ -12,27 +12,30 @@ int Reverser::reverseDigit(int value){
         
 }
 
-string Reverser::reverseString(std::string characters){
-    static int index; // Declare index as static to preserve its value across function calls
-    static std::string reversedString; // Declare reversedString to store the reversed string
+string Reverser::reverseString(string characters){
+    static int index = characters.length()-1;
+    static string new_string = "";
+    if (index < 0 || characters.empty())
+        return new_string;
 
-    // Base case: when all characters have been processed, return the reversed string
-    if (index == characters.length()){
-        return reversedString;
-    } else {
-        // Append the current character to the beginning of the reversed string
-        reversedString = characters[index] + reversedString;
-        
-        // Move to the next character in the input string
-        index++;
-        
-        // Recursive call to process the next character
-        return reverseString(characters);
-    }
+    // Append the character at index to the beginning of the reversed string
+    new_string += characters[index];
+
+    // Decrement index to process the next character in the next recursive call
+    index--;
+
+    // Recursive call with the substring excluding the last character
+    return reverseString(characters);
     
+        
 }
 
 int main(){
     cout << Reverser::reverseDigit(12345) << endl;
     cout << Reverser::reverseString("Happy") << endl;
 }
+
+// static int index = characters.length()
+// if index-1 == 0 return new_string
+//reverseString(characters[index-1]+new_string)
+
