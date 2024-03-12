@@ -10,13 +10,14 @@ int Reverser::reverseDigit(int value){
         x += to_string(value % 10);
         return reverseDigit(value / 10);
     }
-        
 }
 
 string Reverser::reverseString(string characters){
     static int index = characters.length()-1;
     static string new_string = "";
-    if (index < 0 || characters.empty())
+    if (characters.empty()){
+        return "ERROR";
+    } else if (index < 0)
         return new_string;
     new_string += characters[index];
     index--;
