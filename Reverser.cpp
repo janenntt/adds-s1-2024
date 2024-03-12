@@ -2,11 +2,14 @@
 
 int Reverser::reverseDigit(int value){
     static string x;
-    if (value == 0)
+    if (value == 0){
         return stoi(x);
-    else
+    }
+    else {
         x += to_string(value % 10);
         return reverseDigit(value / 10);
+    }
+        
 }
 
 string Reverser::reverseString(std::string characters){
@@ -14,17 +17,19 @@ string Reverser::reverseString(std::string characters){
     static std::string reversedString; // Declare reversedString to store the reversed string
 
     // Base case: when all characters have been processed, return the reversed string
-    if (index == characters.length())
+    if (index == characters.length()){
         return reversedString;
+    } else {
+        // Append the current character to the beginning of the reversed string
+        reversedString = characters[index] + reversedString;
+        
+        // Move to the next character in the input string
+        index++;
+        
+        // Recursive call to process the next character
+        return reverseString(characters);
+    }
     
-    // Append the current character to the beginning of the reversed string
-    reversedString = characters[index] + reversedString;
-    
-    // Move to the next character in the input string
-    index++;
-    
-    // Recursive call to process the next character
-    return reverseString(characters);
 }
 
 int main(){
