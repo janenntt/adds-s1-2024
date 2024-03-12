@@ -1,7 +1,7 @@
 #include "Reverser.h"
-
+int Reverser::x = 0; 
 int Reverser::reverseDigit(int value){
-    static int x;
+
     if (value < 0){
         return -1;
     } else if (value == 0){
