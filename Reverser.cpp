@@ -2,13 +2,11 @@
 
 int Reverser::reverseDigit(int value){
     static string x;
-    if (value < 10){
-        return value;
-    }
-    if (value == 0){
+    if (value < 0){
+        return -1;
+    } else if (value == 0){
         return stoi(x);
-    }
-    else {
+    } else {
         x += to_string(value % 10);
         return reverseDigit(value / 10);
     }
