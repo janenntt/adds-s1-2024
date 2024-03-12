@@ -30,10 +30,6 @@ string Reverser::reverseString(string characters){
         
 }
 
-int main(){
-    cout << Reverser::reverseDigit(12345) << endl;
-    cout << Reverser::reverseString("Happy") << endl;
-}
 
 // static int index = characters.length()
 // if index-1 == 0 return new_string
