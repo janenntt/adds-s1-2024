@@ -4,9 +4,6 @@
 
 class Truckloads {
     public:
-        std::unordered_map<int,int> memo;
-        // numCrates - the number of crates at the warehouse
-        // loadSize - the max number of crates that will fit in a truck
-        static int numTrucks(int numCrates, int loadSize); // return the number of trucks required
+        static int numTrucks(int numCrates, int loadSize);
 };
 #endif

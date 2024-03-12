@@ -1,13 +1,13 @@
 #include "Reverser.h"
 
 int Reverser::reverseDigit(int value){
-    static string x;
+    static int x;
     if (value < 0){
         return -1;
     } else if (value == 0){
-        return stoi(x);
+        return x;
     } else {
-        x += to_string(value % 10);
+        x = x*10 + (value % 10);
         return reverseDigit(value / 10);
     }
 }
